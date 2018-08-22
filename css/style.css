@@ -1,1 +1,51 @@
+@import "fonts.css";
 @import "reset.css";
+
+body{
+    font: 21px/1.2px "Century Gothic" sans-serif;;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1141px;
+}
+
+.row{
+    overflow: hidden;
+}
+
+.logo{
+    float: left;
+}
+
+.contacts{
+    float: right;
+}
+
+header li {
+    float: left;
+}
+
+.nav-menu li{
+    padding: 20px 13px 7px 13px;
+    border-left: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+
+.nav-menu li:first-child{
+    border-left: none;
+}
+
+.nav-menu a{
+    color: #949494;
+    font-size: 20px;
+}
