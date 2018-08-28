@@ -1,9 +1,19 @@
 @font-face {
     font-family: 'Century Gothic';
-    src: url('../fonts/CenturyGothic.eot');
-    src: url('../fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/CenturyGothic.woff') format('woff'),
-    url('../fonts/CenturyGothic.ttf') format('truetype');
+    src: url('../fonts/century_gothic/CenturyGothic.eot');
+    src: url('../fonts/century_gothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/century_gothic/CenturyGothic.woff') format('woff'),
+    url('../fonts/century_gothic/CenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Allura';
+    src: url('../fonts/allura/Allura-Regular.eot');
+    src: url('../fonts/allura/Allura-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/allura/Allura-Regular.woff') format('woff'),
+    url('../fonts/allura/Alluraregular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

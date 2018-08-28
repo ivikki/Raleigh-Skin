@@ -2,7 +2,7 @@
 @import "reset.css";
 
 body{
-    font: 21px/1.2px "Century Gothic" sans-serif;;
+    font: 20px/1.2 "Century Gothic";
 }
 
 a{
@@ -14,7 +14,7 @@ a:hover{
 }
 
 .wrapper{
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     max-width: 1141px;
 }
@@ -25,18 +25,61 @@ a:hover{
 
 .logo{
     float: left;
+    margin: 12px 0;
+    display: inline-block;
+}
+
+.logo img{
+    vertical-align: middle;
+}
+
+.logo p{
+    display: inline-block;
+    vertical-align: middle;
+    color: #d1d3d3;
+    font-size: 19px;
+    line-height: 1.4;
+    margin-left: 14px;
 }
 
 .contacts{
     float: right;
+    margin: 35px 23px 5px 10px;
+}
+
+.contacts p{
+    color: #77a5a6;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.menu li{
+   border-right: 1px solid #dedede;
+    padding: 5px 15px 14px 15px;
+}
+
+.menu li:last-child{
+    border-right: none;
+    padding-right: 0;
+}
+
+.menu a{
+    color: #6b6c70;
+    font-size: 18px;
 }
 
 header li {
     float: left;
 }
 
+.nav-menu{
+    overflow: hidden;
+}
+
 .nav-menu li{
-    padding: 20px 13px 7px 13px;
+    padding: 20px 14px 7px 15px;
     border-left: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
 }
@@ -47,5 +90,5 @@ header li {
 
 .nav-menu a{
     color: #949494;
-    font-size: 20px;
+    text-transform: uppercase;
 }
