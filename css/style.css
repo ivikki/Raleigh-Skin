@@ -123,7 +123,7 @@ main{
 main h4{
     font: 35px "Allura";
     color: #77a5a6;
-    margin-left: 24px;
+    text-align: center;
 }
 
 .block{
@@ -265,22 +265,19 @@ main h4{
 }
 
 footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: #e9e9e9;
     color: #202020;
     font-size: 14px;
     padding: 36px 52px 84px 55px;
-    overflow: hidden;
 }
 
-.footer-left{
-    width: 400px;
-    float: left;
-    margin-top: 4px;
+.footer-box {
+    width: 50%;
 }
 
-.footer-menu{
-    overflow: hidden;
-}
 .footer-menu li{
     float: left;
     border-left: 1px solid #202020;
@@ -296,19 +293,21 @@ footer{
     color: #202020;
 }
 
-.footer-left p{
-    margin-top: 15px;
+.copyright{
+    margin-top: 7px;
+}
+
+.copyright p{
     line-height: 1.5;
 }
 
-.footer-right{
-    width: 210px;
-    float: right;
+.last-p{
+    margin-top: 7px;
 }
 
-.footer-right p{
-    text-align: right;
+.footer-contacts p{
     margin-top: 7px;
+    text-align: right;
 }
 
 .social-menu{
@@ -324,7 +323,7 @@ footer{
     display: block;
 }
 
-.footer-right a{
+.footer-contacts a{
     color: #3191b9;
 }
 
@@ -361,7 +360,37 @@ footer{
     .block{
         margin: 0 auto 30px;
     }
-    .footer-right{
-        float: none;
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+    .footer-menu a{
+        font-size: 19px;
+        color: #bababa;
+    }
+    .footer-menu li{
+        border-left: 1px solid #bababa;
+    }
+    .footer-box {
+        width: auto;
+    }
+    .social-menu{
+        margin: 25px 0 15px 0;
+    }
+    .copyright{
+        order: 1;
+    }
+    .footer-contacts{
+        border-bottom: 1px solid #bababa;
+        padding: 0 20px 20px;
+        text-align: center;
+    }
+    .footer-contacts p{
+        text-align: center;
+    }
+    .copyright{
+        width: 57%;
+        margin-top: 20px;
     }
 }
