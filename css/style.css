@@ -3,8 +3,6 @@
 
 body{
     font: 20px/1.2 "Century Gothic";
-    display: inline-block;
-    width: 100%;
 }
 
 a{
@@ -328,6 +326,9 @@ footer{
 }
 
 @media screen and (max-width: 768px){
+    body{
+        display: inline-block;
+    }
     .wrapper{
         width: 100%;
     }
