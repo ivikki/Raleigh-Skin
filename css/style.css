@@ -128,9 +128,15 @@ main h4{
     margin-bottom: 10px;
 }
 
+.block img{
+    max-width: 100%;
+    height: auto;
+}
+
 .banner-1{
     background: url("../img/content_1.jpg") no-repeat;
-    width: 561px;
+    background-size: cover;
+    max-width: 49%;
     height: 819px;
     display: flex;
 }
@@ -179,23 +185,22 @@ main h4{
 .banner-2{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 570px;
+    justify-content: center;
+    max-width: 51%;
+    height: auto;
     position: relative;
 }
 
 .photo{
-    width: 280px;
-    height: 280px;
+    max-width: 48%;
+    height: auto;
     margin-bottom: 10px;
 }
 
 .photo p{
-    font-size: 27px;
     color: #fff;
     position: absolute;
     width: 50%;
-    text-align: center;
     top: 103px;
     left: 70px;
 }
@@ -220,9 +225,18 @@ main h4{
     position: relative;
 }
 
+.black, .blue{
+    margin-left: 10px;
+}
+
 .banner-2 img{
     opacity: 0.2;
     display: block;
+}
+
+.banner-2 p {
+    font-size: 27px;
+    text-align: center;
 }
 
 .banner-circle{
@@ -232,14 +246,13 @@ main h4{
     height: 228px;
     position: absolute;
     border: 10px solid #fff;
-    top: 171px;
-    left: 171px;
+    top: 50%;
+    left: 50%;
+    margin: -114px 0 0 -114px;
 }
 
 .banner-circle p{
-    font-size: 27px;
     color: #717171;
-    text-align: center;
     width: 75%;
     margin: 60px auto;
 }
@@ -343,11 +356,11 @@ footer{
     }
     .banner-1{
         order: 1;
-        background-size: cover;
-        width: 100%;
+        max-width: 100%;
     }
     .banner-2{
         order: 2;
+        max-width: 100%;
     }
     .banner-3{
         order: 3;
@@ -360,6 +373,9 @@ footer{
     }
     .block{
         margin: 0 auto 30px;
+    }
+    .block-box a:after{
+        right: 20%;
     }
     footer{
         flex-direction: column;
@@ -393,5 +409,160 @@ footer{
     .copyright{
         width: 57%;
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .logo p{
+        font-size: 15px;
+        margin-left: 3px;
+    }
+    .block-box p{
+        font-size: 14px;
+    }
+    main{
+        margin-top: 15px;
+    }
+    main h4{
+        font-size: 27px;
+    }
+    .block-box a{
+        font-size: 12px;
+        width: 70%;
+    }
+    .block-box a:after{
+        right: 13%;
+    }
+    .banner-2 p{
+        font-size: 23px;
+        top: 73px;
+        left: 60px;
+    }
+    .banner-circle{
+        width: 180px;
+        height: 180px;
+        margin: -90px 0 0 -90px;
+    }
+    .banner-circle p{
+        margin-top: 48px;
+    }
+    .block{
+        margin-bottom: 10px;
+    }
+    .banner-3 a, .banner-4 a{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .logo img{
+        width: 90px;
+    }
+    .logo{
+        margin: 10px 0 0 10px;
+    }
+    .contacts-sm a{
+        width: 60px;
+        margin-right: 7px;
+    }
+    .contacts-sm img{
+        max-width: 100%;
+    }
+    .contacts-sm{
+        margin: 30px 5px 0;
+    }
+    .contacts-sm .phone{
+        margin: 0;
+    }
+    .block{
+        margin-bottom: 10px;
+    }
+    .block-box{
+        padding: 10px;
+    }
+    .block-box a:after{
+        right: 9%;
+    }
+    .footer-menu a{
+        font-size: 15px;
+    }
+    .social-menu{
+        margin: 15px 0;
+    }
+    .copyright{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .logo{
+        margin: 5px;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .logo p, .footer-menu a{
+        font-size: 12px;
+    }
+    .contacts-sm{
+        margin: 20px 0 0;
+    }
+    .contacts-sm a{
+        width: 50px;
+    }
+    main h4{
+        font-size: 19px;
+    }
+    .block-box p, .block-box a, footer{
+        font-size: 11px;
+    }
+    .block-box a:after{
+        right: 6%;
+    }
+    .block-box a{
+        padding: 5px;
+        margin-top: 5px;
+     }
+    .banner-2{
+        flex-direction: column;
+    }
+    .banner-2 p{
+        top: 94px;
+        left: 70px;
+    }
+    .photo{
+        width: 100%;
+        display: block;
+        max-width: 100%;
+    }
+    .black, .blue{
+        margin-left: 0;
+    }
+    .blue{
+        margin-bottom: 0;
+    }
+    .banner-3 a, .banner-4 a{
+        font-size: 35px;
+    }
+    footer{
+        padding: 20px;
+    }
+    .social-menu{
+        margin-bottom: 10px;
+    }
+    .copyright{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .block{
+        margin-bottom: 3px;
+    }
+    .photo{
+        margin-bottom: 5px;
+    }
+    .banner-circle{
+        border: 5px solid #fff;
     }
 }
