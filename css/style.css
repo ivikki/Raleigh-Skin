@@ -95,7 +95,7 @@ header li {
 }
 
 .nav-menu li{
-    padding: 13px 14px 7px 15px;
+    padding: 13px 13px 7px 15px;
     border-left: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
 }
@@ -110,12 +110,7 @@ header li {
 }
 
 main{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     margin-top: 21px;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
 main h4{
@@ -126,6 +121,7 @@ main h4{
 
 .block{
     margin-bottom: 10px;
+    width: 50%;
 }
 
 .block img{
@@ -136,9 +132,10 @@ main h4{
 .banner-1{
     background: url("../img/content_1.jpg") no-repeat;
     background-size: cover;
-    max-width: 49%;
+    max-width: 561px;
     height: 819px;
     display: flex;
+    float: left;
 }
 
 .block-box{
@@ -185,14 +182,17 @@ main h4{
 .banner-2{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    max-width: 51%;
+    justify-content: space-between;
+    max-width: 570px;
     height: auto;
     position: relative;
+    float: right;
+    margin: 0;
 }
 
 .photo{
-    max-width: 48%;
+    max-width: 280px;
+    width: 49%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -259,11 +259,14 @@ main h4{
 
 .banner-3{
     position: relative;
+    float: left;
+    max-width: 561px;
 }
 
 .banner-4{
-    margin-top: -249px;
     position: relative;
+    float: right;
+    max-width: 570px;
 }
 
 .banner-3 a, .banner-4 a{
@@ -283,6 +286,7 @@ footer{
     color: #202020;
     font-size: 14px;
     padding: 36px 52px 84px 55px;
+    width: 100%;
 }
 
 .footer-box {
