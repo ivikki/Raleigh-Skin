@@ -70,18 +70,18 @@ a:hover{
     font-size: 18px;
 }
 
-.contacts-sm{
+.contacts-mobile{
     display: none;
     float: right;
     margin: 35px 23px 0 0;
     overflow: hidden;
 }
 
-.contacts-sm .phone{
+.contacts-mobile .phone{
     margin-right: 20px;
 }
 
-.contacts-sm a{
+.contacts-mobile a{
     display: inline-block;
     vertical-align: middle;
 }
@@ -92,12 +92,12 @@ header li {
 
 .nav-menu{
     overflow: hidden;
+    border-top: 1px solid #e5e5e5;
 }
 
 .nav-menu li{
     padding: 13px 13px 7px 15px;
     border-left: 1px solid #e5e5e5;
-    border-top: 1px solid #e5e5e5;
 }
 
 .nav-menu li:first-child{
@@ -127,9 +127,11 @@ main h4{
 .block img{
     max-width: 100%;
     height: auto;
+    display: block;
+    width: 100%;
 }
 
-.banner-1{
+.section-1{
     background: url("../img/content_1.jpg") no-repeat;
     background-size: cover;
     max-width: 561px;
@@ -139,11 +141,10 @@ main h4{
 }
 
 .block-box{
-    width: 90%;
     background: #fff;
     opacity: 0.9;
     border: 7px solid rgba(59, 59, 60, 0.35);
-    margin: 20px auto;
+    margin: 20px;
     padding: 18px 20px 12px 20px;
     align-self: flex-end;
 }
@@ -160,7 +161,7 @@ main h4{
     background: #77a5a6;
     padding: 8px 20px;
     display: block;
-    width: 60%;
+    width: 270px;
     font: 14px "Century Gothic";
     text-transform: uppercase;
     text-align: center;
@@ -175,11 +176,11 @@ main h4{
     background: url("../img/arrow.jpg") no-repeat;
     width: 5px;
     height: 9px;
-    top: 36%;
-    right: 8%;
+    top: 13px;
+    right: 21px;
 }
 
-.banner-2{
+.section-2{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -188,6 +189,8 @@ main h4{
     position: relative;
     float: right;
     margin: 0;
+    text-align: center;
+    font-size: 27px;
 }
 
 .photo{
@@ -197,12 +200,16 @@ main h4{
     margin-bottom: 10px;
 }
 
-.photo p{
+.photo p {
     color: #fff;
     position: absolute;
-    width: 50%;
-    top: 103px;
-    left: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .green{
@@ -229,14 +236,9 @@ main h4{
     margin-left: 10px;
 }
 
-.banner-2 img{
+.section-2 img{
     opacity: 0.2;
     display: block;
-}
-
-.banner-2 p {
-    font-size: 27px;
-    text-align: center;
 }
 
 .banner-circle{
@@ -249,27 +251,25 @@ main h4{
     top: 50%;
     left: 50%;
     margin: -114px 0 0 -114px;
-}
-
-.banner-circle p{
     color: #717171;
-    width: 75%;
-    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner-3{
+.section-3{
     position: relative;
     float: left;
     max-width: 561px;
 }
 
-.banner-4{
+.section-4{
     position: relative;
     float: right;
     max-width: 570px;
 }
 
-.banner-3 a, .banner-4 a{
+.section-3 a, .section-4 a{
     font: 50px "Allura";
     color: #202020;
     display: block;
@@ -352,34 +352,27 @@ footer{
     .nav-menu, .contacts{
         display: none;
     }
-    .contacts-sm{
+    .contacts-mobile{
         display: block;
     }
-    main{
-        flex-direction: column;
-    }
-    .banner-1{
-        order: 1;
-        max-width: 100%;
-    }
-    .banner-2{
-        order: 2;
-        max-width: 100%;
-    }
-    .banner-3{
-        order: 3;
-    }
-    .banner-3 img{
-        width: 570px;
-    }
-    .banner-4{
-        order: 4;
-    }
     .block{
-        margin: 0 auto 30px;
+        margin:0 100px 28px;
+        float: none;
+        width: auto;
+        max-width: 100%;
     }
-    .block-box a:after{
-        right: 20%;
+    .section-1{
+        margin: 0 0 28px 0;
+        max-width: 100%;
+    }
+    .section-3 img, .section-4 img{
+        width: 100%;
+    }
+    .block-box{
+        margin: 23px 44px;
+    }
+    .grey, .blue{
+        margin-bottom: 0;
     }
     footer{
         flex-direction: column;
@@ -411,8 +404,7 @@ footer{
         text-align: center;
     }
     .copyright{
-        width: 57%;
-        margin-top: 20px;
+        margin: 20px 70px 0 120px;
     }
 }
 
@@ -432,29 +424,34 @@ footer{
     }
     .block-box a{
         font-size: 12px;
-        width: 70%;
     }
     .block-box a:after{
-        right: 13%;
+        right: 36px;
+        top: 11px;
     }
-    .banner-2 p{
+    .section-2{
         font-size: 23px;
-        top: 73px;
-        left: 60px;
+        justify-content: center;
+    }
+    .photo{
+        width: 48%;
     }
     .banner-circle{
         width: 180px;
         height: 180px;
         margin: -90px 0 0 -90px;
     }
-    .banner-circle p{
-        margin-top: 48px;
-    }
     .block{
-        margin-bottom: 10px;
+        margin: 0 35px 10px;
     }
-    .banner-3 a, .banner-4 a{
+    .section-1{
+        margin: 0 0 10px 0;
+    }
+    .section-3 a, .section-4 a{
         font-size: 40px;
+    }
+    .copyright{
+        margin: 20px 25px 0;
     }
 }
 
@@ -465,27 +462,29 @@ footer{
     .logo{
         margin: 10px 0 0 10px;
     }
-    .contacts-sm a{
+    .contacts-mobile a{
         width: 60px;
         margin-right: 7px;
     }
-    .contacts-sm img{
+    .contacts-mobile img{
         max-width: 100%;
     }
-    .contacts-sm{
+    .contacts-mobile{
         margin: 30px 5px 0;
     }
-    .contacts-sm .phone{
+    .contacts-mobile .phone{
         margin: 0;
+        width: 70px;
+    }
+    main{
+        margin-top: 7px;
     }
     .block{
         margin-bottom: 10px;
     }
     .block-box{
         padding: 10px;
-    }
-    .block-box a:after{
-        right: 9%;
+        margin: 10px;
     }
     .footer-menu a{
         font-size: 15px;
@@ -508,31 +507,43 @@ footer{
     .logo p, .footer-menu a{
         font-size: 12px;
     }
-    .contacts-sm{
+    .contacts-mobile{
         margin: 20px 0 0;
     }
-    .contacts-sm a{
+    .contacts-mobile a{
         width: 50px;
+    }
+    .contacts-mobile .phone{
+        width: 60px;
     }
     main h4{
         font-size: 19px;
+    }
+    .block{
+        margin: 0 10px 10px;
+    }
+    .section-1{
+        margin: 0 0 10px 0;
     }
     .block-box p, .block-box a, footer{
         font-size: 11px;
     }
     .block-box a:after{
-        right: 6%;
+        right: 12px;
+        top: 8px;
     }
     .block-box a{
+        width: 206px;
         padding: 5px;
         margin-top: 5px;
      }
-    .banner-2{
+    .section-2{
         flex-direction: column;
     }
-    .banner-2 p{
-        top: 94px;
-        left: 70px;
+    .banner-circle{
+        width: 228px;
+        height: 228px;
+        margin: -114px 0 0 -114px;
     }
     .photo{
         width: 100%;
@@ -545,7 +556,10 @@ footer{
     .blue{
         margin-bottom: 0;
     }
-    .banner-3 a, .banner-4 a{
+    .grey{
+        margin-bottom: 10px;
+    }
+    .section-3 a, .section-4 a{
         font-size: 35px;
     }
     footer{
