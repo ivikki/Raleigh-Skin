@@ -13,6 +13,12 @@ a:hover{
     text-decoration: underline;
 }
 
+h4{
+    font: 35px "Allura";
+    color: #77a5a6;
+    text-align: center;
+}
+
 .wrapper{
     margin: 0 auto;
     width: 1141px;
@@ -20,6 +26,7 @@ a:hover{
 
 .row{
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .logo{
@@ -43,7 +50,7 @@ a:hover{
 
 .contacts{
     float: right;
-    margin: 52px 21px 5px 10px;
+    margin: 52px 21px 0 10px;
 }
 
 .contacts p{
@@ -51,8 +58,12 @@ a:hover{
     text-transform: uppercase;
     text-align: right;
     font-weight: bold;
-    margin-bottom: 29px;
     font-size: 17px;
+}
+
+.menu{
+    overflow: hidden;
+    margin-top: 29px;
 }
 
 .menu li{
@@ -111,12 +122,6 @@ header li {
 
 main{
     margin-top: 21px;
-}
-
-main h4{
-    font: 35px "Allura";
-    color: #77a5a6;
-    text-align: center;
 }
 
 .block{
@@ -342,6 +347,28 @@ footer{
     color: #3191b9;
 }
 
+/*Treament_planner page*/
+
+.contacts-treament-planner{
+    margin: 95px 25px 20px 0;
+}
+
+.banner{
+    font-size: 17px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.banner-little-text{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.banner-little-text a{
+    color: #77a5a6;
+}
+
+
 @media screen and (max-width: 768px){
     body{
         display: inline-block;
@@ -419,7 +446,7 @@ footer{
     main{
         margin-top: 15px;
     }
-    main h4{
+    h4{
         font-size: 27px;
     }
     .block-box a{
@@ -516,7 +543,7 @@ footer{
     .contacts-mobile .phone{
         width: 60px;
     }
-    main h4{
+    h4{
         font-size: 19px;
     }
     .block{
