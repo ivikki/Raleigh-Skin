@@ -7,7 +7,7 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <div class="wrapper">
+        <section class="wrapper">
             <header>
                 <div class="row">
                     <div class="logo">
@@ -36,12 +36,105 @@
                 </nav>
             </header>
             <section class="banner">
-                <h4>Treatment Planner</h4>
-                <p>Our <b> Treatment Planner </b> tool allows you to create a printable PDF that only includes procedures you are interested in.</p>
-                <p class="banner-little-text">Please choose each of the <a href="#"> Conditions</a> that concern you and click <a href="#">"Get My Plan"</a> for a custom list of the treaments that could help you the most.</p>
+                <div class="banner-text">
+                    <h4>Treatment Planner</h4>
+                    <p>Our <b> Treatment Planner </b> tool allows you to create a printable PDF that only includes procedures you are interested in.</p>
+                    <p class="banner-little-text">Please choose each of the <a href="#"> Conditions</a> that concern you and click <a href="#">"Get My Plan"</a> for a custom list of the treaments that could help you the most.</p>
+                </div>
             </section>
             <main>
+                <form action="#">
+                    <ul class="tab-menu">
+                        <li>Gender:</li>
+                        <li class="active"><a href="#Female">Female</a></li>
+                        <li><a href="#Male">Male</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="Female" class="female">
+                            <div class="female-left-block">
+                                <p>Select your condition(s) from the list, click &amp; drag circles to area of concern</p>
+                                <div class="female-left-face">
+                                    <img src="img/female_face.jpg" alt="Female-Face" />
+                                    <div class="verge orange">
+                                        <div class="help">Wrinkles around Eyes / Brows</div>
+                                    </div>
+                                    <div class="verge purple">
+                                        <div class="help">Problem Acne Scarring</div>
+                                    </div>
+                                    <div class="verge turquoise">
+                                        <div class="help">Acne Treatment</div>
+                                    </div>
+                                    <div class="verge lime">
+                                        <div class="help">Double Chin</div>
+                                    </div>
+                                </div>
+                                <div class="female-left-body">
+                                    <img src="img/female_body.jpg" alt="Female-Body" />
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="female-right-block">
+                                <h3>Conditions</h3>
+                                <ul class="choice">
+                                    <li class="odd active purple">Problem Acne Scarring</li>
+                                    <li class="active turquoise">Acne Treatment</li>
+                                    <li class="odd active red">Aging Hands</li>
+                                    <li class="active pink">Body Contouring</li>
+                                    <li class="odd active brown">Cellulite</li>
+                                    <li class="active light-blue">Dark Circles / Bags Under Eyes</li>
+                                    <li class="odd active lime">Double Chin</li>
+                                    <li class="active light-yellow">Freckles / Age Spots</li>
+                                    <li class="odd active light-orange">Rosacea</li>
+                                    <li class="active">Sagging Skin</li>
+                                    <li class="odd active">Poor Skin Texture</li>
+                                    <li class="active yellow">Stretch Marks</li>
+                                    <li class="odd active">Sun Damage</li>
+                                    <li class="active">Unwanted Hair</li>
+                                    <li class="odd active orange">Wrinkles around Eyes / Brows</li>
+                                    <li class="active">Wrinkles on Lower Face</li>
+                                    <li class="odd active">Thin Lips</li>
+                                    <li class="active ">Veins on Face</li>
+                                    <li class="odd active dark-green">Veins on Legs</li>
+                                </ul>
+                                <input type="submit" value="GET MY PLAN" />
+                            </div>
+                        </div>
+                        <div id="Male">
 
+                        </div>
+                    </div>
+                </form>
+                <footer>
+                    <nav class="footer-box footer-menu">
+                        <ul>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-box social-menu">
+                        <ul>
+                            <li><a href="#"><img src="img/social.jpg" alt="social"/></a></li>
+                            <li><a href="#"><img src="img/twitter.jpg" alt="twitter"/></a></li>
+                            <li><a href="#"><img src="img/instagram.jpg" alt="instagram"/></a></li>
+                            <li><a href="#"><img src="img/pinterest.jpg" alt="pinterest"/></a></li>
+                            <li><a href="#"><img src="img/facebook.jpg" alt="facebook"/></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-box copyright">
+                        <p>Copyright &copy; 2016 Davis &amp; Pyle Plastic Surgery, P.L.L.C</p>
+                        <p>All Rights Reserved. The Patient Images used on this site are property of Davis &amp; Pyle Plastic Surgery</p>
+                        <p class="last-p">Site Design and Search Marketing by Sector45.</p>
+                    </div>
+                    <div class="footer-box footer-contacts">
+                        <p>Raleigh Skin</p>
+                        <p>2304 Wesvill Ct #310</p>
+                        <p>Raleigh, NC 27607</p>
+                        <p>919.871.3292</p>
+                        <p><a href="#">Get Directions</a></p>
+                    </div>
+                </footer>
             </main>
         </div>
     </body>

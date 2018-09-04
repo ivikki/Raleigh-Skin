@@ -357,17 +357,252 @@ footer{
     font-size: 17px;
     text-align: center;
     margin-top: 24px;
+    background: url("../img/banner_bg.jpg") no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 183px;
+    padding: 20px 0 20px 66px;
+    line-height: 1.6;
+}
+
+.banner-text{
+    width: 547px;
 }
 
 .banner-little-text{
     font-size: 13px;
     font-weight: bold;
+    margin-top: 12px;
 }
 
 .banner-little-text a{
     color: #77a5a6;
 }
 
+form{
+    position: relative;
+    background: #e5e5e5;
+    padding: 13px 0 13px 13px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.tab-menu{
+    overflow: hidden;
+    border-bottom: 1px solid #747474;
+    width: 290px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 17px;
+    right: 22px;
+}
+
+.tab-menu li{
+    float: left;
+    font-size: 21px;
+    font-weight: bold;
+    color: #77a5a6;
+    padding-left: 35px;
+}
+
+.tab-menu li:first-child{
+    padding-left: 0;
+}
+
+.tab-menu a{
+    color: #747474;
+    font-weight: normal;
+    display: block;
+    position: relative;
+}
+
+.tab-menu .active a:before, .tab-menu a:before{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    top: 4px;
+    left: -24px;
+}
+
+.tab-menu a:before{
+    border: 1px solid #747474;
+}
+
+.tab-menu .active a:before{
+    background: #77a5a6;
+    border: 3px solid #fff;
+}
+
+.female{
+    display: flex;
+    justify-content: space-between;
+}
+
+.female-left-block{
+    width: 794px;
+    border: 7px solid #c9c9c9;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+.female-left-block p{
+    font-size: 15px;
+    font-style: italic;
+    color: #c9c9c9;
+    margin: 15px 10px 0;
+}
+
+.female-left-block .help{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #fff;
+    position: absolute;
+}
+
+.female-left-block .verge{
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    border: 3px solid #fff;
+    position: absolute;
+}
+
+.female-left-block .orange{
+    top: 416px;
+    left: 297px;
+}
+
+.female-left-block .purple{
+    top: 497px;
+    left: 301px;
+}
+
+.female-left-block .turquoise{
+    top: 504px;
+    left: 174px;
+}
+
+.female-left-block .lime{
+    top: 591px;
+    left: 210px;
+}
+
+.female-left-face, .female-left-body{
+    float: left;
+}
+
+.female-left-face{
+    border-right: 1px solid #c9c9c9;
+    margin: 35px 0 28px 0;
+    padding: 150px 36px 230px;
+}
+
+.female-left-body{
+    padding: 0 0 27px 35px;
+}
+
+.female-right-block{
+    margin-top: 58px;
+    width: 336px;
+}
+
+.female-right-block h3{
+    font-size: 27px;
+    color: #77a5a6;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.female-right-block li{
+    font-size: 18px;
+    color: #747474;
+    padding: 10px 0 10px 36px;
+    position: relative;
+}
+
+.odd{
+    background: #efefef;
+}
+
+.female-right-block li:before{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    top: 13px;
+    left: 9px;
+    border: 1px solid #747474;
+}
+
+.choice li.active:before{
+    border: 3px solid #fff;
+}
+
+.choice li.active.purple:before, .female-left-block .purple{
+    background: #9977a6;
+}
+
+.choice li.active.red:before{
+    background: #ea3840;
+}
+
+.choice li.active.pink:before{
+     background: #f819e6;
+ }
+
+.choice li.active.brown:before{
+    background: #693a34;
+}
+
+.choice li.active.light-blue:before{
+     background: #1aecee;
+}
+
+.choice li.active.light-yellow:before{
+    background: #eff996;
+}
+
+.choice li.active.light-orange:before{
+    background: #f0bb18;
+}
+
+.choice li.active.turquoise:before, .female-left-block .turquoise{
+    background: #77a5a6;
+}
+
+.choice li.active.lime:before, .female-left-block .lime{
+    background: #77a684;
+}
+
+.choice li.active.yellow:before{
+    background: #d7dc42;
+}
+
+.choice li.active.orange:before, .female-left-block .orange{
+    background: #e66f4a;
+}
+
+.choice li.active.dark-green:before{
+    background: #155758;
+}
+
+input[type="submit"]{
+    background: #77a5a6 url("../img/arrow.jpg") no-repeat 150px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    padding: 6px 50px;
+    margin: 25px auto 0;
+    display: block;
+}
 
 @media screen and (max-width: 768px){
     body{
