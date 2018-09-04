@@ -246,7 +246,7 @@ main{
     display: block;
 }
 
-.banner-circle{
+.circle-block{
     background: #e3e3e3;
     border-radius: 50%;
     width: 228px;
@@ -436,35 +436,87 @@ form{
     border: 3px solid #fff;
 }
 
-.female{
+.female, .male{
     display: flex;
     justify-content: space-between;
 }
 
-.female-left-block{
+.tab-left-block{
     width: 794px;
     border: 7px solid #c9c9c9;
-    overflow: hidden;
     background: #fff;
     position: relative;
 }
 
-.female-left-block p{
+.tab-left-block p{
     font-size: 15px;
     font-style: italic;
     color: #c9c9c9;
     margin: 15px 10px 0;
 }
 
-.female-left-block .help{
+.tab-left-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-left-face{
+    border-right: 1px solid #c9c9c9;
+    margin: 35px 0 28px 0;
+    padding: 150px 36px 0;
+}
+
+.tab-left-body{
+    padding: 0 57px 27px 0;
+}
+
+.tab-left-block .help{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
     background: #fff;
     position: absolute;
+    padding: 9px 12px;
+    border: 3px solid;
 }
 
-.female-left-block .verge{
+.tab-left-block .help:after{
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 17px solid transparent;
+    border-left: 17px solid #fff;
+    top:0;
+    right: -34px;
+}
+
+.orange-color{
+    color: #e66f4a;
+    left: -273px;
+    top:-15px;
+}
+
+.turquoise-color{
+    color:#77a5a6;
+    left: -162px;
+    top: -15px;
+}
+
+.lime-color{
+    color: #77a684;
+    left: -138px;
+    top: -15px;
+}
+
+.purple-color{
+    color: #9977a6;
+    left: -228px;
+    top: -15px;
+}
+
+.tab-left-block .verge{
     border-radius: 50%;
     width: 19px;
     height: 19px;
@@ -472,46 +524,32 @@ form{
     position: absolute;
 }
 
-.female-left-block .orange{
+.tab-left-block .orange{
     top: 416px;
     left: 297px;
 }
 
-.female-left-block .purple{
+.tab-left-block .purple{
     top: 497px;
     left: 301px;
 }
 
-.female-left-block .turquoise{
+.tab-left-block .turquoise{
     top: 504px;
     left: 174px;
 }
 
-.female-left-block .lime{
+.tab-left-block .lime{
     top: 591px;
     left: 210px;
 }
 
-.female-left-face, .female-left-body{
-    float: left;
-}
-
-.female-left-face{
-    border-right: 1px solid #c9c9c9;
-    margin: 35px 0 28px 0;
-    padding: 150px 36px 230px;
-}
-
-.female-left-body{
-    padding: 0 0 27px 35px;
-}
-
-.female-right-block{
+.tab-right-block{
     margin-top: 58px;
     width: 336px;
 }
 
-.female-right-block h3{
+.tab-right-block h3{
     font-size: 27px;
     color: #77a5a6;
     text-align: center;
@@ -519,7 +557,7 @@ form{
     margin-bottom: 15px;
 }
 
-.female-right-block li{
+.tab-right-block li{
     font-size: 18px;
     color: #747474;
     padding: 10px 0 10px 36px;
@@ -530,7 +568,7 @@ form{
     background: #efefef;
 }
 
-.female-right-block li:before{
+.tab-right-block li:before{
     display: block;
     position: absolute;
     content: '';
@@ -546,7 +584,7 @@ form{
     border: 3px solid #fff;
 }
 
-.choice li.active.purple:before, .female-left-block .purple{
+.choice li.active.purple:before, .tab-left-block .purple{
     background: #9977a6;
 }
 
@@ -574,11 +612,11 @@ form{
     background: #f0bb18;
 }
 
-.choice li.active.turquoise:before, .female-left-block .turquoise{
+.choice li.active.turquoise:before, .tab-left-block .turquoise{
     background: #77a5a6;
 }
 
-.choice li.active.lime:before, .female-left-block .lime{
+.choice li.active.lime:before, .tab-left-block .lime{
     background: #77a684;
 }
 
@@ -586,7 +624,7 @@ form{
     background: #d7dc42;
 }
 
-.choice li.active.orange:before, .female-left-block .orange{
+.choice li.active.orange:before, .tab-left-block .orange{
     background: #e66f4a;
 }
 
@@ -600,8 +638,12 @@ input[type="submit"]{
     font-size: 14px;
     border: none;
     padding: 6px 50px;
-    margin: 25px auto 0;
+    margin: 25px auto 20px;
     display: block;
+}
+
+.male .tab-left-face{
+    padding: 199px 36px 0 110px;
 }
 
 @media screen and (max-width: 768px){
@@ -698,7 +740,7 @@ input[type="submit"]{
     .photo{
         width: 48%;
     }
-    .banner-circle{
+    .circle-block{
         width: 180px;
         height: 180px;
         margin: -90px 0 0 -90px;
@@ -802,7 +844,7 @@ input[type="submit"]{
     .section-2{
         flex-direction: column;
     }
-    .banner-circle{
+    .circle-block{
         width: 228px;
         height: 228px;
         margin: -114px 0 0 -114px;
@@ -842,7 +884,7 @@ input[type="submit"]{
     .photo{
         margin-bottom: 5px;
     }
-    .banner-circle{
+    .circle-block{
         border: 5px solid #fff;
     }
 }
