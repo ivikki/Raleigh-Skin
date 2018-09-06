@@ -361,12 +361,13 @@ footer{
     background-size: cover;
     width: 100%;
     height: 183px;
-    padding: 12px 0 12px 66px;
+    padding: 12px 0;
     line-height: 1.6;
 }
 
 .banner-text{
     width: 547px;
+    margin-left: 66px;
 }
 
 .banner-little-text{
@@ -476,6 +477,7 @@ form{
     height: 19px;
     border: 3px solid #fff;
     position: absolute;
+    cursor: pointer;
 }
 
 .content-left-block .orange{
@@ -692,6 +694,7 @@ input[type="submit"]{
     padding: 6px 50px;
     margin: 25px auto 20px;
     display: block;
+    cursor: pointer;
 }
 
 #male .content-face{
@@ -763,12 +766,18 @@ input[type="submit"]{
         margin: 20px 70px 0 120px;
     }
     .banner{
-        background: url(../img/banner_bg.jpg) no-repeat 76% 0;
-        padding-left: 20px;
+        background: url(../img/banner_mobile_bg.jpg) no-repeat 100% 0;
+        background-size: cover;
+        width: 100%;
         line-height: 1;
+        margin-top: 10px;
     }
     .banner-text{
         width: 424px;
+        margin-left: 40px;
+    }
+    .banner-text .banner-little-text{
+        margin-left: 0;
     }
     form{
         padding: 0;
@@ -782,10 +791,12 @@ input[type="submit"]{
         font-size: 18px;
     }
     .tab-menu li:first-child{
-        display: block;
         width: 100%;
         text-align: center;
         margin-bottom: 10px;
+    }
+    .tab-menu .active a:before, .tab-menu a:before{
+        top: 2px;
     }
     .content-left-block{
         width: 60%;
@@ -886,6 +897,60 @@ input[type="submit"]{
     .copyright{
         margin: 20px 25px 0;
     }
+    .banner{
+        font-size: 14px;
+    }
+    .banner-text{
+        width: 260px;
+        margin-left: 5px;
+    }
+    .banner-little-text{
+        font-size: 11px;
+    }
+    form{
+        margin-bottom: 10px;
+    }
+    .tab{
+        flex-direction: column;
+    }
+    .tab-menu li:first-child{
+        width: 33%;
+    }
+    .tab-menu li{
+        font-size: 16px;
+        float: left;
+    }
+    .tab-menu{
+        width: 290px;
+        right: 85px;
+        padding-bottom: 5px;
+        top: 10px;
+    }
+    .tab-menu .active a:before, .tab-menu a:before{
+        top: 0;
+    }
+    .content-left-block, .content-right-block{
+        width: 100%;
+    }
+    .content-right-block h3{
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .content-right-block li{
+        padding: 10px 0 10px 36px;
+    }
+    .content-right-block li:before{
+        top:13px;
+    }
+    .content-right-block{
+        order: -1;
+        margin-top: 58px;
+    }
+    input[type="submit"]{
+        margin: 10px auto;
+        padding: 6px 50px;
+        background: #77a5a6 url("../img/arrow.jpg") no-repeat 150px;
+    }
 }
 
 @media screen and (max-width: 420px){
@@ -928,6 +993,17 @@ input[type="submit"]{
     .copyright{
         width: 90%;
     }
+    .tab-menu{
+        right: 67px;
+    }
+    .banner{
+        background: url(../img/banner_mobile_bg.jpg) no-repeat 77% 0;
+        background-size: cover;
+        margin-top: 0;
+    }
+    .content-face{
+        margin: 5px 5px 20px 5px;
+    }
 }
 
 @media screen and (max-width: 360px){
@@ -950,7 +1026,7 @@ input[type="submit"]{
         width: 60px;
     }
     h4{
-        font-size: 19px;
+        font-size: 24px;
     }
     .block{
         margin: 0 10px 10px;
@@ -958,7 +1034,10 @@ input[type="submit"]{
     .section-1{
         margin: 0 0 10px 0;
     }
-    .block-box p, .block-box a, footer{
+    .block-box p, footer{
+        font-size: 13px;
+    }
+    .block-box a{
         font-size: 11px;
     }
     .block-box a:after{
@@ -1004,6 +1083,27 @@ input[type="submit"]{
     .copyright{
         display: none;
     }
+    .banner {
+        background:#e5e5e5;
+        height: auto;
+        width: 100%;
+    }
+    .banner-text{
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+        line-height: 1.1;
+    }
+    .content-left-block{
+        display: none;
+    }
+    .tab-menu{
+        width: 280px;
+        right: 38px;
+    }
+    .tab-menu li:first-child{
+        text-align: right;
+    }
 }
 
 @media screen and (max-width: 320px){
@@ -1015,5 +1115,14 @@ input[type="submit"]{
     }
     .circle-block{
         border: 5px solid #fff;
+    }
+    h4{
+        font-size: 20px;
+    }
+    .banner h4{
+        font-size: 24px;
+    }
+    .tab-menu{
+        right: 20px;
     }
 }
