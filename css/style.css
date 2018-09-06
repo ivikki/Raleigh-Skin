@@ -237,10 +237,6 @@ main{
     position: relative;
 }
 
-.black, .blue{
-    margin-left: 10px;
-}
-
 .section-2 img{
     opacity: 0.2;
     display: block;
@@ -274,7 +270,7 @@ main{
     max-width: 570px;
 }
 
-.section-3 a, .section-4 a{
+.block a.link{
     font: 50px "Allura";
     color: #202020;
     display: block;
@@ -467,6 +463,11 @@ form{
 
 .content-left-block .verge{
     position: absolute;
+    z-index: 1;
+}
+
+.content-left-block .verge:hover{
+    z-index: 2;
 }
 
 .content-left-block .verge:after{
@@ -539,7 +540,7 @@ form{
     border-bottom: 3px solid;
     border-left: 3px solid;
     white-space: nowrap;
-    top: -10px;
+    top: -9999px;
     right: 21px;
     opacity: 0;
     transition: opacity 0.3s ease-out;
@@ -547,6 +548,7 @@ form{
 
 .content-left-block .verge:hover .help{
     display: block;
+    top: -10px;
     opacity: 1;
 }
 
@@ -702,9 +704,6 @@ input[type="submit"]{
 }
 
 @media screen and (max-width: 768px){
-    body{
-        display: inline-block;
-    }
     .wrapper{
         width: 100%;
     }
@@ -715,14 +714,19 @@ input[type="submit"]{
         display: block;
     }
     .block{
-        margin:0 100px 28px;
+        margin: 0 auto 28px;
         float: none;
         width: auto;
-        max-width: 100%;
+        max-width: 640px;
+        padding: 0 35px;
     }
     .section-1{
         margin: 0 0 28px 0;
         max-width: 100%;
+        padding: 0;
+    }
+    .block a.link{
+        right: 57px;
     }
     .section-3 img, .section-4 img{
         width: 100%;
@@ -807,13 +811,18 @@ input[type="submit"]{
     }
     .content-left-block p{
         text-align: center;
-        margin: 10px 78px;
+        margin: 10px auto;
+        max-width: 270px;
+        font-size: 14px;
     }
     .content-face{
         border-right: none;
         border-bottom: 1px solid #c9c9c9;
         margin: 10px 15px 20px 15px;
         padding: 0 0 20px 0;
+    }
+    .content-face img{
+        max-width: 100%;
     }
     .content-body{
         padding: 0;
@@ -851,7 +860,17 @@ input[type="submit"]{
         background: #77a5a6 url(../img/arrow.jpg) no-repeat 190px;
     }
 }
-
+@media screen and (max-width: 640px){
+    .logo img{
+        width: 18.125vw;
+    }
+    .block{
+        padding: 0 5.46875vw;
+    }
+    .section-1{
+        padding: 0;
+    }
+}
 @media screen and (max-width: 480px){
     .logo p{
         font-size: 15px;
@@ -875,7 +894,6 @@ input[type="submit"]{
     }
     .section-2{
         font-size: 23px;
-        justify-content: center;
     }
     .photo{
         width: 48%;
@@ -886,12 +904,12 @@ input[type="submit"]{
         margin: -90px 0 0 -90px;
     }
     .block{
-        margin: 0 35px 10px;
+        margin: 0 0 10px;
     }
     .section-1{
         margin: 0 0 10px 0;
     }
-    .section-3 a, .section-4 a{
+    .block a.link{
         font-size: 40px;
     }
     .copyright{
@@ -1071,7 +1089,7 @@ input[type="submit"]{
     .grey{
         margin-bottom: 10px;
     }
-    .section-3 a, .section-4 a{
+    .block a.link{
         font-size: 35px;
     }
     footer{
