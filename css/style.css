@@ -26,11 +26,12 @@ h4{
 
 .row{
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 5px;
 }
 
 .logo{
-    float: left;
     margin: 12px 0 0 17px;
     display: inline-block;
 }
@@ -49,7 +50,6 @@ h4{
 }
 
 .contacts{
-    float: right;
     margin: 52px 21px 0 10px;
 }
 
@@ -83,12 +83,11 @@ h4{
 
 .contacts-mobile{
     display: none;
-    float: right;
     margin: 35px 23px 0 0;
     overflow: hidden;
 }
 
-.contacts-mobile .phone{
+.contacts-mobile .icon-phone{
     margin-right: 20px;
 }
 
@@ -130,14 +129,13 @@ main{
 }
 
 .block img{
-    max-width: 100%;
     height: auto;
     display: block;
     width: 100%;
 }
 
 .section-1{
-    background: url("../img/content_1.jpg") no-repeat;
+    background: url("../img/content_1.jpg") no-repeat 0 100%;
     background-size: cover;
     max-width: 561px;
     height: 819px;
@@ -385,21 +383,26 @@ form{
 }
 
 .tab-menu{
-    overflow: hidden;
-    border-bottom: 1px solid #747474;
-    width: 290px;
-    padding-bottom: 10px;
+    width: 30%;
     position: absolute;
-    top: 17px;
-    right: 22px;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.tab-menu-list{
+    margin: 18px 23px 0;
+    border-bottom: 1px solid #747474;
+    padding-bottom: 10px;
 }
 
 .tab-menu li{
-    float: left;
     font-size: 21px;
     font-weight: bold;
     color: #77a5a6;
     padding-left: 35px;
+    display: inline-block;
 }
 
 .tab-menu li:first-child{
@@ -529,7 +532,7 @@ form{
     position: relative;
 }
 
-.content-left-block .help{
+.content-left-block .tooltip{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
@@ -546,13 +549,13 @@ form{
     transition: opacity 0.3s ease-out;
 }
 
-.content-left-block .verge:hover .help{
+.content-left-block .verge:hover .tooltip{
     display: block;
     top: -10px;
     opacity: 1;
 }
 
-.content-left-block .help:after, .content-left-block .help:before{
+.content-left-block .tooltip:after, .content-left-block .tooltip:before{
     display: block;
     content: '';
     width: 0;
@@ -561,7 +564,7 @@ form{
     pointer-events: none;
 }
 
-.content-left-block .help:after{
+.content-left-block .tooltip:after{
     border-width: 16px 0 16px 23px;
     border-style: solid;
     border-color: transparent transparent transparent #fff;
@@ -569,34 +572,34 @@ form{
     right: -22px;
 }
 
-.content-left-block .help:before{
+.content-left-block .tooltip:before{
     border-width: 19px 0 19px 28px;
     border-style: solid;
     top: -3px;
     right: -28px;
 }
 
-.orange .help:before{
+.orange .tooltip:before{
     border-color: transparent transparent transparent #e66f4a;
 }
 
-.turquoise .help:before{
+.turquoise .tooltip:before{
     border-color: transparent transparent transparent #77a5a6;
 }
 
-.lime .help:before{
+.lime .tooltip:before{
     border-color: transparent transparent transparent #77a684;
 }
 
-.purple .help:before{
+.purple .tooltip:before{
     border-color: transparent transparent transparent #9977a6;
 }
 
-.yellow .help:before{
+.yellow .tooltip:before{
     border-color: transparent transparent transparent #d7dc42;
 }
 
-.dark-green .help:before{
+.dark-green .tooltip:before{
     border-color: transparent transparent transparent #155758;
 }
 
@@ -618,6 +621,7 @@ form{
     color: #747474;
     padding: 10px 0 10px 36px;
     position: relative;
+    cursor: pointer;
 }
 
 .choice li:nth-child(odd){
@@ -703,6 +707,7 @@ input[type="submit"]{
     padding: 199px 36px 0 110px;
 }
 
+
 @media screen and (max-width: 768px){
     .wrapper{
         width: 100%;
@@ -723,19 +728,17 @@ input[type="submit"]{
     .section-1{
         margin: 0 0 28px 0;
         max-width: 100%;
+        height: 800px;
         padding: 0;
     }
     .block a.link{
         right: 57px;
     }
-    .section-3 img, .section-4 img{
+    .block img.cover{
         width: 100%;
     }
     .block-box{
         margin: 23px 44px;
-    }
-    .grey, .blue{
-        margin-bottom: 0;
     }
     footer{
         flex-direction: column;
@@ -787,16 +790,16 @@ input[type="submit"]{
         padding: 0;
     }
     .tab-menu{
-        width: 187px;
-        right: 65px;
-        padding-bottom: 15px;
+        width: 40%;
+    }
+    .tab-menu-list{
+        margin: 18px 50px;
     }
     .tab-menu li{
         font-size: 18px;
     }
     .tab-menu li:first-child{
-        width: 100%;
-        text-align: center;
+        display: block;
         margin-bottom: 10px;
     }
     .tab-menu .active a:before, .tab-menu a:before{
@@ -868,9 +871,17 @@ input[type="submit"]{
         padding: 0 5.46875vw;
     }
     .section-1{
+        height: 650px;
         padding: 0;
     }
+    .contacts-mobile img.icon-phone{
+        width: 12.96875vw;
+    }
+    .contacts-mobile img.icon-menu{
+        width: 9.375vw;
+    }
 }
+
 @media screen and (max-width: 480px){
     .logo p{
         font-size: 15px;
@@ -907,6 +918,7 @@ input[type="submit"]{
         margin: 0 0 10px;
     }
     .section-1{
+        height: 500px;
         margin: 0 0 10px 0;
     }
     .block a.link{
@@ -931,18 +943,18 @@ input[type="submit"]{
     .tab{
         flex-direction: column;
     }
+    .tab-menu-list{
+        margin: 10px 110px;
+        padding-bottom: 5px;
+    }
     .tab-menu li:first-child{
-        width: 33%;
+        display: inline-block;
     }
     .tab-menu li{
         font-size: 16px;
-        float: left;
     }
     .tab-menu{
-        width: 290px;
-        right: 85px;
-        padding-bottom: 5px;
-        top: 10px;
+        width: 100%;
     }
     .tab-menu .active a:before, .tab-menu a:before{
         top: 0;
@@ -972,25 +984,14 @@ input[type="submit"]{
 }
 
 @media screen and (max-width: 420px){
-    .logo img{
-        width: 90px;
-    }
     .logo{
         margin: 10px 0 0 10px;
     }
-    .contacts-mobile a{
-        width: 60px;
+    .contacts-mobile .icon-phone{
         margin-right: 7px;
     }
-    .contacts-mobile img{
-        max-width: 100%;
-    }
     .contacts-mobile{
-        margin: 30px 5px 0;
-    }
-    .contacts-mobile .phone{
-        margin: 0;
-        width: 70px;
+        margin: 30px 10px 0;
     }
     main{
         margin-top: 7px;
@@ -1011,13 +1012,12 @@ input[type="submit"]{
     .copyright{
         width: 90%;
     }
-    .tab-menu{
-        right: 67px;
-    }
     .banner{
         background: url(../img/banner_mobile_bg.jpg) no-repeat 77% 0;
-        background-size: cover;
         margin-top: 0;
+    }
+    .tab-menu-list{
+        margin: 10px 75px;
     }
     .content-face{
         margin: 5px 5px 20px 5px;
@@ -1028,20 +1028,11 @@ input[type="submit"]{
     .logo{
         margin: 5px;
     }
-    .logo img{
-        width: 70px;
-    }
     .logo p, .footer-menu a{
         font-size: 12px;
     }
     .contacts-mobile{
-        margin: 20px 0 0;
-    }
-    .contacts-mobile a{
-        width: 50px;
-    }
-    .contacts-mobile .phone{
-        width: 60px;
+        margin: 20px 10px 0;
     }
     h4{
         font-size: 24px;
@@ -1050,6 +1041,7 @@ input[type="submit"]{
         margin: 0 10px 10px;
     }
     .section-1{
+        height: 380px;
         margin: 0 0 10px 0;
     }
     .block-box p, footer{
@@ -1080,14 +1072,8 @@ input[type="submit"]{
         display: block;
         max-width: 100%;
     }
-    .black, .blue{
-        margin-left: 0;
-    }
     .blue{
         margin-bottom: 0;
-    }
-    .grey{
-        margin-bottom: 10px;
     }
     .block a.link{
         font-size: 35px;
@@ -1112,15 +1098,11 @@ input[type="submit"]{
         margin: 0;
         line-height: 1.1;
     }
+    .tab-menu-list{
+        margin: 10px 50px;
+    }
     .content-left-block{
         display: none;
-    }
-    .tab-menu{
-        width: 280px;
-        right: 38px;
-    }
-    .tab-menu li:first-child{
-        text-align: right;
     }
 }
 
@@ -1140,7 +1122,7 @@ input[type="submit"]{
     .banner h4{
         font-size: 24px;
     }
-    .tab-menu{
-        right: 20px;
+    .tab-menu-list{
+        margin: 10px 30px;
     }
 }
